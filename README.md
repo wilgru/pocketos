@@ -35,6 +35,7 @@ PocketBase stores its SQLite database and runtime data in `pb_data/`.
 
 - Go extension route: `GET /api/healthz/go`
 - JavaScript hook route: `GET /api/healthz/js`
+- Go collection registry: the `_tools` system collection is created by a JavaScript migration; each new base collection is added with its name in the required, unique `targetCollectionName` field.
 
 These routes return simple JSON responses so you can verify both extension systems are wired correctly.
 
