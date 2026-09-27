@@ -5,6 +5,7 @@ import (
 	"errors"
 	"fmt"
 	"net/http"
+	"os"
 
 	"github.com/pocketbase/pocketbase/core"
 )
@@ -105,6 +106,11 @@ func Register(app core.App) {
 		if _, err := e.App.FindCollectionByNameOrId(toolsCollectionName); err != nil {
 			return fmt.Errorf("_tools migration must be applied before serving: %w", err)
 		}
+
+		e.UIExtensions = append(e.UIExtensions, core.UIExtension{
+			Name: "pocketsystem",
+			FS:   os.DirFS("ui_extensions/pocketsystem"),
+		})
 
 		e.Router.GET("/api/healthz/go", func(re *core.RequestEvent) error {
 			return re.JSON(http.StatusOK, map[string]string{
