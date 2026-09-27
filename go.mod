@@ -1,4 +1,4 @@
-module github.com/wilgru/PocketSystem
+module github.com/wilgru/pocketos
 
 go 1.27
 

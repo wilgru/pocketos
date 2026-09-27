@@ -7,7 +7,7 @@ import (
 	"github.com/pocketbase/pocketbase/plugins/jsvm"
 	"github.com/pocketbase/pocketbase/plugins/migratecmd"
 
-	"github.com/wilgru/PocketSystem/internal/extensions"
+	"github.com/wilgru/PocketOS/internal/extensions"
 )
 
 func main() {

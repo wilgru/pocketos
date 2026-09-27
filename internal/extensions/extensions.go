@@ -108,8 +108,8 @@ func Register(app core.App) {
 		}
 
 		e.UIExtensions = append(e.UIExtensions, core.UIExtension{
-			Name: "pocketsystem",
-			FS:   os.DirFS("ui_extensions/pocketsystem"),
+			Name: "pocketos",
+			FS:   os.DirFS("ui_extensions/pocketos"),
 		})
 
 		e.Router.GET("/api/healthz/go", func(re *core.RequestEvent) error {
